@@ -52,9 +52,12 @@ a {
 }
 
 .ejercicio__container {
-    min-width: 80%;
-    height: 600px;
-    margin-top: 20px;
+    width: 80%;
+    display: flex;flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    padding: 50px;
     background-color: #ffffff;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
@@ -63,3 +66,53 @@ a {
     font-size: 36px;
     text-align: center;
 }
+
+.subtitle__ejercicio {
+    font-size: 28px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/*  *****  PDFs  *****  */
+.pdf {
+    display: none;
+}
+
+.btn__container {
+    display: inline-block;
+    margin: 30px;
+    margin-right: 100px;
+}
+
+.btnPdf,
+.btn-close-pdf,
+.btn-selector-eq,
+.btn-selector-gt,
+.btn-selector-lt,
+.btn-colorear {
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 50px;
+    color: #eeeeee;
+    background-color: cornflowerblue;
+    transition: all 300ms ease-in-out;
+}
+
+.btnPdf:hover,
+.btn-close-pdf:hover,
+.btn-selector-eq:hover,
+.btn-selector-gt:hover,
+.btn-selector-lt:hover,
+.btn-colorear:hover {
+    background-color: rgb(23, 55, 114);
+}
+
+.separador {
+    width: 100%;
+    height: 5px;
+    background-color: #eeeeee;
+    margin: 20px 0;
+}
+

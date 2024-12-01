@@ -3,10 +3,16 @@
 //  **************************************************************************  
 
 
-$(document).ready(function () {
-    
-    //  ----------  Documento Cargado!!!  ----------
-    console.warn('----------  Documento Cargado!!!  -----  01-introduccion  ----- jQuery version:', $.fn.jquery, ' ----------', '\n');
-
-
+$("p").click(function () {
+    $(this)
+        .css({
+            color: "white",
+            backgroundColor: "green",
+            fontSize: "24px",
+        })
+        .text("He cambiado mi estilo");
 });
+
+
+
+
