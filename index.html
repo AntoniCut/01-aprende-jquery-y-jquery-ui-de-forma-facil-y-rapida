@@ -14,23 +14,30 @@
     <link rel="stylesheet" href="./assets/css/styles-global.css">
     <script src="./assets/jquery/core/jquery-3.7.1.min.js"> </script>
     <script src="./assets/js/main.js"> </script>
-       
+
 </head>
 
 <body>
 
     <header class="cabecera">
 
-        <img src="./assets/img/jquery-banner.png">
+        <img class="logo-banner" src="./assets/img/jquery-banner.png">
         <h1 class="title__header"> Aprende jQuery y jQuery UI de Forma Facil y Práctica </h1>
+        <img class="logo-jquery" src="./assets/favicon/jquery-icono-32px.ico">
+
+    </header>
+
+    <aside class="aside">
 
         <nav class="navbar">
 
+            <h2 class="navbar__title"> Menú Secciones </h2>
+
             <ul class="navbar__list">
-                <li class="navbar__item"> <a id="primerosPasos"> 1. Primeros Pasos </a> </li>
-                <li class="navbar__item"> <a id="selectores"> 2. Selectores </a> </li>
-                <li class="navbar__item"> <a id="eventos"> 3. Eventos </a> </li>
-                <li class="navbar__item"> <a href=""> 4. Funciones y Efectos </a> </li>
+                <li class="navbar__item" id="primerosPasos"> <a> 1. Primeros Pasos </a> </li>
+                <li class="navbar__item" id="selectores"> <a> 2. Selectores </a> </li>
+                <li class="navbar__item" id="eventos"> <a> 3. Eventos </a> </li>
+                <li class="navbar__item" id="funcionesEfectos"> <a> 4. Funciones y Efectos </a> </li>
                 <li class="navbar__item"> <a href=""> 5. jQuery y HTML </a> </li>
                 <li class="navbar__item"> <a href=""> 6. jQuery y AJAX </a> </li>
                 <li class="navbar__item"> <a href=""> 7. Widgets Interesantes </a> </li>
@@ -39,13 +46,16 @@
             </ul>
         </nav>
 
-    </header>
+    </aside>
 
     <main id="renderHtml" class="contenido">
-        
+
+        <!--  ********************************************************  -->
+        <!--  **********  Aqui se Renderiza los Ejercicios  ********** -->
+        <!--  ********************************************************  -->
+
     </main>
 
-    
 </body>
 
 </html>

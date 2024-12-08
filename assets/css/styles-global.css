@@ -9,6 +9,7 @@
 }
 
 body {
+    position: relative;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -16,7 +17,10 @@ body {
     background-color: #eeeeee;
 }
 
-/*  **********  Header  **********  */
+
+/*  ******************************  */
+/*  **********  HEADER  **********  */
+/*  ******************************  */
 
 .cabecera {
     width: 100%;
@@ -25,10 +29,26 @@ body {
     justify-content: space-around;
     align-items: center;
     background-color: #ffffff;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.logo-banner {
+    width: 200px;
 }
 
 .title__header {
-    font-size: 48px;
+    font-size: 36px;
+}
+
+
+/*  ************************************  */
+/*  **********  ASIDE - MENÚ  **********  */
+/*  ************************************  */
+
+.aside {
+    position: absolute;
+    top: 130px;
+    left: 15px;
 
 }
 
@@ -39,20 +59,65 @@ li {
 a {
     text-decoration: none;
     cursor: pointer;
+    color: #ffffff;
+}
+
+.navbar__title {
+    width: 230px;
+    height: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffffff;
+    background-color: cornflowerblue;
+    cursor: pointer;
+}
+
+.navbar__list {
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.navbar__item {
+    width: 230px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 20px;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: cornflowerblue;
+    transition: all 300ms ease-in-out;
 }
 
 
-/*  **********  Contenido  **********  */
+
+/*  *********************************  */
+/*  **********  CONTENIDO  **********  */
+/*  *********************************  */
+
+/* .renderHtml__container {
+    width: 80%;
+    position: absolute;
+    top: 195px;
+    left: 250px;
+    margin: 0;
+    padding: 0;
+    background-color: aqua;
+} */
 
 .contenido {
     width: 100%;
+    /* position: absolute;
+    top: 0;
+    left: 0; */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .ejercicio__container {
-    width: 80%;
+    width: 70%;
     display: flex;flex-direction: column;
     align-items: center;
     margin-top: 50px;
@@ -73,42 +138,102 @@ a {
     margin: 20px 0;
 }
 
-/*  *****  PDFs  *****  */
+
+
+/*  ****************************  */
+/*  **********  PDFs  **********  */
+/*  ****************************  */
+
 .pdf {
     display: none;
     overflow: hidden;
 }
 
 .btn__container {
-    display: inline-block;
-    margin: 30px;
-    margin-right: 100px;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
 }
 
-.btnPdf,
-.btn-close-pdf,
-.btn-selector-eq,
-.btn-selector-gt,
-.btn-selector-lt,
-.btn-colorear {
+
+/*  *******************************  */
+/*  **********  Botones  **********  */
+/*  *******************************  */
+
+button {
     cursor: pointer;
     border-radius: 5px;
     border: none;
     padding: 10px 20px;
-    margin-right: 50px;
     color: #eeeeee;
     background-color: cornflowerblue;
     transition: all 300ms ease-in-out;
 }
 
+button:hover {
+    background-color: rgb(23, 55, 114);
+}
+
+
+/* .btnPdf,
+.btn-close-pdf,
+.btn-selector-eq,
+.btn-selector-gt,
+.btn-selector-lt,
+.btn-colorear,
+#show,
+#hide,
+#toggle,
+#fadeIn,
+#fadeOut,
+#fadeToggle,
+#fadeTo,
+#resetFadeTo,
+#slideDown,
+#slideUp,
+#slideToggle,
+#lanzar,
+#animarBtn,
+#stopBtn,
+#resetAnimacionBtn,
+#animarCallbackBtn {
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+    color: #eeeeee;
+    background-color: cornflowerblue;
+    transition: all 300ms ease-in-out;
+} */
+
+
+/*  -----  Hover Menú y Botones  -----  */
+/* .navbar__title:hover,
+.navbar__item:hover,
 .btnPdf:hover,
 .btn-close-pdf:hover,
 .btn-selector-eq:hover,
 .btn-selector-gt:hover,
 .btn-selector-lt:hover,
-.btn-colorear:hover {
+.btn-colorear:hover,
+#show:hover,
+#hide:hover,
+#toggle:hover,
+#fadeIn:hover,
+#fadeOut:hover,
+#fadeToggle:hover,
+#fadeTo:hover,
+#resetFadeTo:hover,
+#slideDown:hover,
+#slideUp:hover,
+#slideToggle:hover,
+#lanzar:hover,
+#animarBtn:hover,
+#stopBtn:hover,
+#resetAnimacionBtn:hover,
+#animarCallbackBtn:hover {
     background-color: rgb(23, 55, 114);
-}
+} */
 
 .separador {
     width: 100%;
@@ -117,3 +242,42 @@ a {
     margin: 20px 0;
 }
 
+
+/*  ----- Funciones y Efectos  -----  */
+
+.animar__container {
+    width: 250px;
+    height: 250px;
+}
+#animar1,
+#animar2,
+#animar3,
+#animar4 {
+    width: 250px;
+    height: 250px;
+    background-color: red;
+}
+
+.animar__contenedores {
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+    position: relative;
+}
+
+#animarPrimero,
+#animarCallback {
+    background-color: orange;
+}
+
+#animarSegundo {
+    background-color: red;
+}
+
+#animarTercero {
+    background-color: green;
+}
+
+#animarCuarto {
+    background-color: blue;
+}

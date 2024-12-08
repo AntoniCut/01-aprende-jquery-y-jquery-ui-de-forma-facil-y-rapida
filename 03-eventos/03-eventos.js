@@ -83,20 +83,13 @@ $(document).ready(function () {
         });
     });
 
-    //  ----------  focus  ----------
+    //  ----------  blur  ----------
     $('input').on('blur', function () {
         $(this).css({
             color: 'black',
             backgroundColor: '#ffffff'
         });
     });
-
-
-
-
-
-
-
 
 });
 
