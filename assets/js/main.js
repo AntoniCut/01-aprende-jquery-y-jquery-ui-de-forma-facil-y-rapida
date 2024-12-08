@@ -89,12 +89,52 @@ $(document).ready(function () {
     });
 
 
-     // ---------- 05-jquery-html ----------
+    // ---------- 05-jquery-html ----------
      $('#jqueryHtml').on('click', function () {
         loadSimultaneousFade(
             "#renderHtml", 
             './05-jquery-y-html/05-jquery-html.html', 
             './05-jquery-y-html/05-jquery-html.js'
+        );
+    });
+
+
+    // ---------- 06-jquery-ajax ----------
+    $('#jqueryAjax').on('click', function () {
+        loadSimultaneousFade(
+            "#renderHtml", 
+            './06-jquery-y-ajax/06-jquery-ajax.html', 
+            './06-jquery-y-ajax/06-jquery-ajax.js', 
+        );
+    });
+
+
+    // ---------- 07-widgets ----------
+    $('#widgets').on('click', function () {
+        loadSimultaneousFade(
+            "#renderHtml", 
+            './07-widgets/07-widgets.html', 
+            './07-widgets/07-widgets.js', 
+        );
+    });
+
+
+     // ---------- 08-jQueryUI ----------
+     $('#jqueryUI').on('click', function () {
+        loadSimultaneousFade(
+            "#renderHtml", 
+            './08-jquery-ui/08-jquery-ui.html', 
+            './08-jquery-ui/08-jquery-ui.js', 
+        );
+    });
+
+
+    // ---------- 09-cierreCurso ----------
+    $('#cierreCurso').on('click', function () {
+        loadSimultaneousFade(
+            "#renderHtml", 
+            './09-cierre-curso/09-cierre-curso.html', 
+            './09-cierre-curso/09-cierre-curso.js', 
         );
     });
 
