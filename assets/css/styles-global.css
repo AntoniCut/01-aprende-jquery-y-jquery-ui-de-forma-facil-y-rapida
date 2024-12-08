@@ -76,6 +76,7 @@ a {
 /*  *****  PDFs  *****  */
 .pdf {
     display: none;
+    overflow: hidden;
 }
 
 .btn__container {
