@@ -23,6 +23,10 @@ body {
 /*  ******************************  */
 
 .cabecera {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -46,9 +50,11 @@ body {
 /*  ************************************  */
 
 .aside {
-    position: absolute;
+    position: fixed;
     top: 130px;
     left: 15px;
+    padding: 20px;
+    background-color: #ffffff;
 
 }
 
@@ -114,9 +120,13 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 30px;
+    margin-bottom: 100px;
 }
 
 .ejercicio__container {
+    position: relative;
+    top: 80px;
     width: 70%;
     display: flex;flex-direction: column;
     align-items: center;
@@ -243,7 +253,9 @@ button:hover {
 }
 
 
-/*  ----- Funciones y Efectos  -----  */
+/*  ************************************************  */
+/*  **********  04 - Funciones y Efectos  **********  */
+/*  ************************************************  */
 
 .animar__container {
     width: 250px;
@@ -280,4 +292,48 @@ button:hover {
 
 #animarCuarto {
     background-color: blue;
+}
+
+
+/*  ******************************************  */
+/*  **********  05 - jQuery y HTML  **********  */
+/*  ******************************************  */
+
+.img__container {
+    width: 400px;
+    height: 300px;
+}
+
+.imagen,
+.imagen2,
+.imagen3 {
+    image-rendering: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.texto-añadido {
+    background-color: antiquewhite;
+}
+
+.ejemplo__container {
+    width: 500px;
+    height: 50px;
+}
+
+.ejemplo-remove-empty,
+.ejemplo-css {
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    border: 2px solid black;
+    line-height: 50px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.rojo-fuente {
+    color: red;
+    font-size: 28px;
 }

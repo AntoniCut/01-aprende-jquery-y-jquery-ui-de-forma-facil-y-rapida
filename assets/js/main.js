@@ -88,6 +88,16 @@ $(document).ready(function () {
         );
     });
 
+
+     // ---------- 05-jquery-html ----------
+     $('#jqueryHtml').on('click', function () {
+        loadSimultaneousFade(
+            "#renderHtml", 
+            './05-jquery-y-html/05-jquery-html.html', 
+            './05-jquery-y-html/05-jquery-html.js'
+        );
+    });
+
 });
 
 
