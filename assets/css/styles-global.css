@@ -8,14 +8,22 @@
     box-sizing: border-box;
 }
 
+html,
 body {
     position: relative;
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #eeeeee;
+    /* background-color: #eeeeee; */
+    background: url('../background/background-malla.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
+
 
 
 /*  ******************************  */
@@ -32,16 +40,26 @@ body {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
+    background: url('../background/background-malla.jpeg');
+    background-size: cover;
+    /* Asegura que la imagen cubra toda la pantalla */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    background-position: center center;
+    /* Centra la imagen */
+    text-align: center;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .logo-banner {
     width: 200px;
+    mix-blend-mode: multiply;
 }
 
 .title__header {
     font-size: 36px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -54,8 +72,24 @@ body {
     top: 130px;
     left: 15px;
     padding: 20px;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
+    background: url('../background/background-malla.jpeg');
+    
+    
 
+    background-size: cover;
+    /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    background-attachment: fixed;
+    /* Hace que la imagen se quede fija mientras haces scroll */
+
+
+
+
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 li {
@@ -113,14 +147,14 @@ a {
 } */
 
 .contenido {
-    width: 100%;
+    width: 90%;
     /* position: absolute;
     top: 0;
     left: 0; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 30px;
+    /* margin-left: 30px; */
     margin-bottom: 100px;
 }
 
@@ -128,7 +162,8 @@ a {
     position: relative;
     top: 80px;
     width: 70%;
-    display: flex;flex-direction: column;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     margin-top: 50px;
     margin-bottom: 100px;
@@ -170,7 +205,8 @@ a {
 /*  **********  Botones  **********  */
 /*  *******************************  */
 
-button {
+button,
+input[type="submit"] {
     cursor: pointer;
     border-radius: 5px;
     border: none;
@@ -180,7 +216,8 @@ button {
     transition: all 300ms ease-in-out;
 }
 
-button:hover {
+button:hover,
+input[type="submit"]:hover {
     background-color: rgb(23, 55, 114);
 }
 
@@ -261,6 +298,7 @@ button:hover {
     width: 250px;
     height: 250px;
 }
+
 #animar1,
 #animar2,
 #animar3,
@@ -336,4 +374,9 @@ button:hover {
 .rojo-fuente {
     color: red;
     font-size: 28px;
+}
+
+input[type="text"] {
+    width: 300px;
+    height: 35px;
 }
