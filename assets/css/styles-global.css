@@ -76,6 +76,7 @@ body {
     height: 70px;
     margin-top: 130px;
     padding: 20px;
+<<<<<<< HEAD
     
     background: url('../background/background-malla.jpeg');
     background-size: cover;             /* Asegura que la imagen cubra todo el contenedor */
@@ -83,6 +84,25 @@ body {
     background-repeat: no-repeat;       /* Evita que la imagen se repita */
     background-attachment: fixed;       /* Hace que la imagen se quede fija mientras haces scroll */
 
+=======
+    /* background-color: #ffffff; */
+    background: url('../background/background-malla.jpeg');
+    
+    
+
+    background-size: cover;
+    /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    background-attachment: fixed;
+    /* Hace que la imagen se quede fija mientras haces scroll */
+
+
+
+
+>>>>>>> 71622ca3be445bbac7439d606a7496f52479ab8d
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -136,9 +156,19 @@ a {
 
 .contenido {
     width: 90%;
+<<<<<<< HEAD
     display: flex;
     flex-direction: column;
     align-items: center;
+=======
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-left: 30px; */
+>>>>>>> 71622ca3be445bbac7439d606a7496f52479ab8d
     margin-bottom: 100px;
 }
 
@@ -151,7 +181,11 @@ a {
 .ejercicio__container {
     position: relative;
     top: 80px;
+<<<<<<< HEAD
     width: 100%;
+=======
+    width: 70%;
+>>>>>>> 71622ca3be445bbac7439d606a7496f52479ab8d
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -309,6 +343,7 @@ input[type="submit"]:hover {
 input[type="text"] {
     width: 300px;
     height: 35px;
+<<<<<<< HEAD
 }
 
 
@@ -452,3 +487,6 @@ input[type="text"] {
 #cycleContainer {
     margin-bottom: 500px;
 }
+=======
+}
+>>>>>>> 71622ca3be445bbac7439d606a7496f52479ab8d

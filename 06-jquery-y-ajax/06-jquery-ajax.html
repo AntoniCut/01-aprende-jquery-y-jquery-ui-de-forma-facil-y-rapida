@@ -3,12 +3,33 @@
 <!--  *************************************************************  -->
 
 
+<<<<<<< HEAD
+=======
+<style>
+    
+    .render-img img {
+        width: 500px;
+        height: 400px;
+    }
+
+    .show-info1,
+    .show-info2,
+    .show-info3 {
+        margin-top: 50px;
+        font-size: 16px;
+    }
+
+</style>
+
+
+>>>>>>> 71622ca3be445bbac7439d606a7496f52479ab8d
 <section class="ejercicio__container">
 
     <h2 class="title__ejercicio"> 06 jQuery y AJAX </h2>
 
     <span class="separador"> </span>
 
+<<<<<<< HEAD
     <h3> Correr Aplicación en XAMPP </h3> 
     <br> <br>
     http://localhost/01-aprende-jquery-y-jquery-ui-de-forma-facil-y-practica-06-jquery-y-ajax/index.html 
@@ -17,3 +38,86 @@
     <span class="separador"> </span>
     
 </section>
+=======
+
+    <!--  ----------  PDFs  ------------>
+    <embed id="Pdf1" class="pdf" src="./06-jquery-y-ajax/pdf/26-jquery-y-ajax.pdf" type="application/pdf"
+        width="100%" height="650px">
+    
+    <span class="separador"> </span>
+
+
+    <!--  ----------  LOAD ----------  -->
+    <h3 class="subtitle__ejercicio"> Método Load </h3>
+    
+    <div class="btn__container">
+        <button id="img1">Imagen 1</button>
+	    <button id="img2">Imagen 2</button>
+	    <button id="txt1">Texto 1</button>
+    </div>
+
+    <div class="render-img"> 
+        <!--  -----  Renderizado de la Imagen y el Texto  -----  -->
+    </div>
+
+    <span class="separador"> </span>
+
+
+    <!--  ----------  GET Y POST ----------  -->
+    <h3 class="subtitle__ejercicio"> Método Get y Post </h3>
+    
+    <span> <strong> NOTA: </strong> Correr la Aplicación en un Servidor como por ejemplo: XAMPP. Para que funcione. </span>
+    <br> <br>
+
+    <form method="post" action="enviar1.php" name="form1" id="form1">
+		<input type="text" name="nombre1" id="nombre1">
+		<input type="submit" name="enviar1" value="Enviar formulario con POST" id="enviar1">
+	</form>
+
+    <div class="show-info1"> 
+        <!--  -----  Renderizado de la informacion que nos viene del archivo php  -----  -->
+    </div>
+
+    <span class="separador"> </span>
+    
+
+    <!--  ----------  AJAX ----------  -->
+    <h3 class="subtitle__ejercicio"> Método AJAX </h3>
+    
+    <span> <strong> NOTA: </strong> Correr la Aplicación en un Servidor como por ejemplo: XAMPP. Para que funcione. </span>
+    <br> <br>
+
+    <form method="post" action="enviar2.php" name="form2" id="form2">
+		<input type="text" name="nombre2" id="nombre2">
+		<input type="submit" name="enviar2" value="Enviar formulario con AJAX" id="enviar2">
+	</form>
+
+    <div class="show-info2"> 
+        <!--  -----  Renderizado de la informacion que nos viene del archivo php  -----  -->
+    </div>
+
+    <span class="separador"> </span>
+
+
+    <!--  ----------  Plugin para AJAX ----------  -->
+    <h3 class="subtitle__ejercicio"> Pluging para el Método AJAX </h3>
+    
+    <span> <strong> NOTA: </strong> Correr la Aplicación en un Servidor como por ejemplo: XAMPP. Para que funcione. </span>
+    <br> <br>
+
+    <form method="post" action="enviar3.php" name="form3" id="form3">
+		<input type="text" name="nombre3" id="nombre3">
+		<input type="submit" name="enviar3" value="Enviar formulario con Plugin de AJAX" id="enviar3">
+	</form>
+
+    <div class="show-info3"> 
+        <!--  -----  Renderizado de la informacion que nos viene del archivo php  -----  -->
+    </div>
+
+
+</section>
+
+<script src="../assets/js/renderPdfs.js"> </script>
+
+<!-- <script src="./06-jquery-y-ajax/jquery.form.js" defer> </script> -->
+>>>>>>> 71622ca3be445bbac7439d606a7496f52479ab8d
