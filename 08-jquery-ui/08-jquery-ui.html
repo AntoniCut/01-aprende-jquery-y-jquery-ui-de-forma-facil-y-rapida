@@ -3,15 +3,6 @@
 <!--  *******************************************************  -->
 
 
-<style>
-    input {
-        width: 500px;
-        height: 40px;
-        padding-left: 10px;
-    }
-</style>
-
-
 <section class="ejercicio__container">
 
     <h2 class="title__ejercicio"> 08 jQuery UI </h2>
@@ -19,8 +10,16 @@
     <span class="separador"> </span>
 
        
-    <!--  ----------  jQuery UI ----------  -->
-    <h3 class="subtitle__ejercicio"> jQuery UI </h3>
+    <!--  ------------------------------------  -->
+    <!--  ----------  Introducción  ----------  -->
+    <!--  ------------------------------------  -->
+    <h3 class="subtitle__ejercicio"> Introducción </h3>
+
+    
+    <h4> Calendar </h4>
+    <br>
+
+    <input type="text" id="calendario">
 
     <div class="btn__container">
         <button id="si"> Si </button>
@@ -31,4 +30,41 @@
     <span class="separador"> </span>
 
 
+    <!--  --------------------------------------------  -->
+    <!--  ----------  Draggable y Droppable ----------  -->
+    <!--  --------------------------------------------  -->
+    <h3 class="subtitle__ejercicio"> Draggable </h3>
+
+    <div class="containerDivs">
+
+        <div id="contenedorDraggable">
+            <p> Arrastra este elemento </p>
+        </div>
+    
+        <div id="contenedorDroppable">
+            <p> Suelta Aqui el Elemento </p>
+        </div>
+
+    </div>
+    
+
+
+
+
+    <div class="btn__container">
+        <button id="si"> Si </button>
+        <button id="no"> No </button>
+        <button id="mostrar"> Mostrar </button>
+    </div>
+
+    <span class="separador"> </span>
+
+
+
+
+
 </section>
+
+
+<script src="./assets/jquery/core/jquery-3.7.1.min.js"> </script>
+<script src="./assets/jquery/ui/jquery-ui.min.js"> </script>

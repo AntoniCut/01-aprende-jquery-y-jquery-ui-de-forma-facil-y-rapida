@@ -37,10 +37,6 @@ $(document).ready(function () {
     });
 
 
-    
-
-
-
     function loadSimultaneousFade(container, url, scriptUrl, pathname) {
        
 
