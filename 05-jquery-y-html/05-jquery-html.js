@@ -7,6 +7,11 @@ $(document).ready(function () {
 
     console.warn('-----  05-jquery-html.js - cargado!!!  -----');
 
+
+    //  -----  Cambiar el título de la página  -----
+    document.title = '05 - jQuery y HTML';
+
+    
     //  -------------------------------------
     //  ----------  jQuery y HTML  ----------
     //  -------------------------------------

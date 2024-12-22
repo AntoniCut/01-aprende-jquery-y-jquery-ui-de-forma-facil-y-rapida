@@ -7,6 +7,11 @@ $(document).ready(function () {
 
     console.warn('-----  04-funciones-efectos.js - cargado!!!  -----');
 
+
+    //  -----  Cambiar el título de la página  -----
+    document.title = '04 - Funciones y Efectos';
+
+
     //  -------------------------------------------
     //  ----------  Funciones y Efectos  ----------
     //  -------------------------------------------

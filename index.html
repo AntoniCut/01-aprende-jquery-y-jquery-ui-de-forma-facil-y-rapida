@@ -10,9 +10,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./assets/favicon/jquery-icono-32px.ico">
+    
     <title> Aprende jQuery de Forma Facil y Práctica - Udemy - Antonio Santos </title>
+    
+    <!--  -----  Estilos jQuery UI, Kiwicks y de la Aplicación  -----  -->
+    <link rel="stylesheet" id="theme" href="./assets/css/themes-jquery-ui//ui-lightness//jquery-ui.min.css">
+    <link rel="stylesheet" id="theme" href="./assets/css/kwicks.css">
     <link rel="stylesheet" href="./assets/css/styles-global.css">
+
+    <!--  -----  API de Google Map  -----  -->
+    <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=#API_KEY#"> </script>
+    
+    <!--  -----  libreria jQuery -----  -->
     <script src="./assets/jquery/core/jquery-3.7.1.min.js"> </script>
+    <!-- <script src="./assets/jquery/core/jquery-1.11.1.min.js"> </script> -->
+    
+    <!--  -----  Script de la Aplicación  -----  -->
     <script src="./assets/js/main.js"> </script>
 
 </head>
@@ -21,7 +34,8 @@
 
     <header class="cabecera">
 
-        <img class="logo-banner" src="./assets/img/jquery-banner.png">
+        <a id="home"> <img class="logo-banner" src="./assets/img/jquery-banner.png"> </a>
+        
         <h1 class="title__header"> Aprende jQuery y jQuery UI de Forma Facil y Práctica </h1>
         <img class="logo-jquery" src="./assets/favicon/jquery-icono-32px.ico">
 
@@ -29,6 +43,7 @@
 
     <aside class="aside">
 
+        <!--  -----  Menú de Navegación  -----  -->
         <nav class="navbar">
 
             <h2 class="navbar__title"> Menú Secciones </h2>
@@ -46,16 +61,31 @@
             </ul>
         </nav>
 
+        <!--  -----  Menú de Temas de jQuery UI  -----  -->
+        <div id="renderJqueryUI" class="jquery-ui__container">
+        
+            <!--  ------------------------------------------------  -->
+            <!--  -----  Render change-theme-jquery-ui.html  -----  -->
+            <!--  ------------------------------------------------  -->
+    
+        </div>
+        
     </aside>
+
+
+
 
     <main id="renderHtml" class="contenido">
 
         <!--  ********************************************************  -->
         <!--  **********  Aqui se Renderiza los Ejercicios  ********** -->
         <!--  ********************************************************  -->
+        <img src="./assets/img/presentacion-curso.jpg" class="img__home">
 
     </main>
 
 </body>
 
 </html>
+
+

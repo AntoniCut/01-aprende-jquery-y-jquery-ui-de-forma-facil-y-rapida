@@ -8,6 +8,11 @@ $(document).ready(function () {
 
     console.warn('-----  01-introduccion.js - cargado!!!  -----');
     
+
+    //  -----  Cambiar el título de la página  -----
+    document.title = '01 - Introducción';
+
+
     //  ---------------------------------------------
     //  ----------  Introducción a jQuery  ----------
     //  ---------------------------------------------

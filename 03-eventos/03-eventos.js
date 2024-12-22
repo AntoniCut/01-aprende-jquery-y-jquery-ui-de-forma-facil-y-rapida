@@ -7,6 +7,11 @@ $(document).ready(function () {
 
     console.warn('-----  03-eventos.js - cargado!!!  -----');
 
+
+    //  -----  Cambiar el título de la página  -----
+    document.title = '03 - Eventos';
+
+
     //  ------------------------------------------
     //  ----------  Eventos de Teclado  ----------
     //  ------------------------------------------

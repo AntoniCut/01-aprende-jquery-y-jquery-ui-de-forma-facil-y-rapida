@@ -8,14 +8,22 @@
     box-sizing: border-box;
 }
 
+html,
 body {
     position: relative;
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #eeeeee;
+    /* background-color: #eeeeee; */
+    background: url('../background/background-malla.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
+
 
 
 /*  ******************************  */
@@ -26,36 +34,56 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 100;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
+    background: url('../background/background-malla.jpeg');
+    background-size: cover;
+    /* Asegura que la imagen cubra toda la pantalla */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    background-position: center center;
+    /* Centra la imagen */
+    text-align: center;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .logo-banner {
     width: 200px;
+    mix-blend-mode: multiply;
 }
 
 .title__header {
     font-size: 36px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 
-/*  ************************************  */
-/*  **********  ASIDE - MENÚ  **********  */
-/*  ************************************  */
+/*  *************************************  */
+/*  **********  ASIDE - MENÚS  **********  */
+/*  *************************************  */
 
 .aside {
-    position: fixed;
-    top: 130px;
-    left: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+    height: 70px;
+    margin-top: 130px;
     padding: 20px;
-    background-color: #ffffff;
+    
+    background: url('../background/background-malla.jpeg');
+    background-size: cover;             /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center;        /* Centra la imagen */
+    background-repeat: no-repeat;       /* Evita que la imagen se repita */
+    background-attachment: fixed;       /* Hace que la imagen se quede fija mientras haces scroll */
 
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 li {
@@ -66,6 +94,10 @@ a {
     text-decoration: none;
     cursor: pointer;
     color: #ffffff;
+}
+
+.navbar {
+    z-index: 10;
 }
 
 .navbar__title {
@@ -102,35 +134,28 @@ a {
 /*  **********  CONTENIDO  **********  */
 /*  *********************************  */
 
-/* .renderHtml__container {
-    width: 80%;
-    position: absolute;
-    top: 195px;
-    left: 250px;
-    margin: 0;
-    padding: 0;
-    background-color: aqua;
-} */
-
 .contenido {
-    width: 100%;
-    /* position: absolute;
-    top: 0;
-    left: 0; */
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 30px;
     margin-bottom: 100px;
+}
+
+.img__home {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .ejercicio__container {
     position: relative;
     top: 80px;
-    width: 70%;
-    display: flex;flex-direction: column;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-top: 50px;
+    margin-top: -20px;
     margin-bottom: 100px;
     padding: 50px;
     background-color: #ffffff;
@@ -170,7 +195,8 @@ a {
 /*  **********  Botones  **********  */
 /*  *******************************  */
 
-button {
+button,
+input[type="submit"] {
     cursor: pointer;
     border-radius: 5px;
     border: none;
@@ -180,70 +206,11 @@ button {
     transition: all 300ms ease-in-out;
 }
 
-button:hover {
+button:hover,
+input[type="submit"]:hover {
     background-color: rgb(23, 55, 114);
 }
 
-
-/* .btnPdf,
-.btn-close-pdf,
-.btn-selector-eq,
-.btn-selector-gt,
-.btn-selector-lt,
-.btn-colorear,
-#show,
-#hide,
-#toggle,
-#fadeIn,
-#fadeOut,
-#fadeToggle,
-#fadeTo,
-#resetFadeTo,
-#slideDown,
-#slideUp,
-#slideToggle,
-#lanzar,
-#animarBtn,
-#stopBtn,
-#resetAnimacionBtn,
-#animarCallbackBtn {
-    cursor: pointer;
-    border-radius: 5px;
-    border: none;
-    padding: 10px 20px;
-    color: #eeeeee;
-    background-color: cornflowerblue;
-    transition: all 300ms ease-in-out;
-} */
-
-
-/*  -----  Hover Menú y Botones  -----  */
-/* .navbar__title:hover,
-.navbar__item:hover,
-.btnPdf:hover,
-.btn-close-pdf:hover,
-.btn-selector-eq:hover,
-.btn-selector-gt:hover,
-.btn-selector-lt:hover,
-.btn-colorear:hover,
-#show:hover,
-#hide:hover,
-#toggle:hover,
-#fadeIn:hover,
-#fadeOut:hover,
-#fadeToggle:hover,
-#fadeTo:hover,
-#resetFadeTo:hover,
-#slideDown:hover,
-#slideUp:hover,
-#slideToggle:hover,
-#lanzar:hover,
-#animarBtn:hover,
-#stopBtn:hover,
-#resetAnimacionBtn:hover,
-#animarCallbackBtn:hover {
-    background-color: rgb(23, 55, 114);
-} */
 
 .separador {
     width: 100%;
@@ -261,6 +228,7 @@ button:hover {
     width: 250px;
     height: 250px;
 }
+
 #animar1,
 #animar2,
 #animar3,
@@ -336,4 +304,151 @@ button:hover {
 .rojo-fuente {
     color: red;
     font-size: 28px;
+}
+
+input[type="text"] {
+    width: 300px;
+    height: 35px;
+}
+
+
+/*  *************************************************  */
+/*  **********  07 - Widgets Interesantes  **********  */
+/*  *************************************************  */
+
+.animacion-container1 {
+    width: 100px;
+    height: 100px;
+}
+
+.animacion-container2 {
+    width: 200px;
+    height: 200px;
+}
+
+.animacion-container3 {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-color: antiquewhite;
+}
+
+.animacion-elemento1,
+.animacion-elemento2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: red;
+}
+
+.animacion-elemento3 {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    background-color: green;
+}
+
+
+/*  ---------------------------------  */
+
+.image-rotate {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 100px;
+    left: 300px;
+    background-color: green;
+}
+
+.animacion-elemento4 {
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    position: absolute;
+    top: 100px;
+    left: 600px;
+    text-align: center;
+    background-color: blue;
+}
+
+
+/*  ---------------------------------  */
+
+#mapa {
+    width: 100%;
+    height: 400px;
+    border:  3px solid blueviolet;
+    
+}
+
+
+/*  ---------------------------------  */
+#form1 {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+#form1 label.error{
+    width: 300px;
+    margin-top: 10px;
+    padding-left: 20px;
+    color: red;
+    background-color: #eeeeee;
+    font-size: 14px;
+    display: block;
+}
+
+#form1 input.error{
+    border:2px solid red;
+}
+
+
+/*  ---------------------------------  */
+
+#tablas {
+    width: 300px;
+    height: 305px;
+}
+
+#tablas ul li {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    padding-left: 20px;
+
+    color: #ffffff;
+    background-color: blueviolet;
+}
+
+
+/*  ---------------------------------  */
+
+#example1 li{
+    float: left;
+    width: 125px;
+    height: 100px;
+    margin-right: 5px;
+  }
+  #example1 .kwick1 { 
+    background: #53b388 url('../demo/meet.gif');
+  }
+  #example1 .kwick2 {
+    background: #5a69a9 url('../demo/kwicks.gif');
+  }
+  #example1 .kwick3 {
+    background: #c26468 url('../demo/for.gif');
+  }
+  #example1 .kwick4 { 
+    background: #bf7cc7 url('../demo/jquery.gif');
+    margin-right: none;
+  }
+
+
+  /*  ---------------------------------  */
+#cycleContainer {
+    margin-bottom: 500px;
 }
