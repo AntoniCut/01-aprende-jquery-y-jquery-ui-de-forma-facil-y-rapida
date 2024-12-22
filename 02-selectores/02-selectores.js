@@ -149,7 +149,5 @@ $(document).ready(function () {
         $("#p5, span").css('background-color', 'orange');
     });
 
-
-
 });
 
