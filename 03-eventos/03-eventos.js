@@ -5,8 +5,8 @@
 
 $(document).ready(function () {
 
-    console.warn('-----  03-eventos.js - cargado!!!  -----');
-
+    
+    console.warn('-----  03-eventos.js - cargado!!!  -- jQuery Versión ', $.fn.jquery);
 
     //  -----  Cambiar el título de la página  -----
     document.title = '03 - Eventos';

@@ -5,7 +5,8 @@
 
 $(document).ready(function () {
 
-    console.warn('-----  04-funciones-efectos.js - cargado!!!  -----');
+    
+    console.warn('-----  04-funciones-efectos.js - cargado!!!  -- jQuery Versión ', $.fn.jquery);
 
 
     //  -----  Cambiar el título de la página  -----

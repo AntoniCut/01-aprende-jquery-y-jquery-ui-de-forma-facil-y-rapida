@@ -6,26 +6,20 @@
 <section class="ejercicio__container">
 
     <h2 class="title__ejercicio"> 08 jQuery UI </h2>
-    
+
     <span class="separador"> </span>
 
-       
+
     <!--  ------------------------------------  -->
     <!--  ----------  Introducción  ----------  -->
     <!--  ------------------------------------  -->
     <h3 class="subtitle__ejercicio"> Introducción </h3>
 
-    
+
     <h4> Calendar </h4>
     <br>
 
     <input type="text" id="calendario">
-
-    <div class="btn__container">
-        <button id="si"> Si </button>
-        <button id="no"> No </button>
-        <button id="mostrar"> Mostrar </button>
-    </div>
 
     <span class="separador"> </span>
 
@@ -33,31 +27,324 @@
     <!--  --------------------------------------------  -->
     <!--  ----------  Draggable y Droppable ----------  -->
     <!--  --------------------------------------------  -->
-    <h3 class="subtitle__ejercicio"> Draggable </h3>
+    <h3 class="subtitle__ejercicio"> Draggable y Droppable </h3>
 
     <div class="containerDivs">
 
         <div id="contenedorDraggable">
             <p> Arrastra este elemento </p>
         </div>
-    
+
         <div id="contenedorDroppable">
             <p> Suelta Aqui el Elemento </p>
         </div>
 
     </div>
-    
+
+    <span class="separador"> </span>
 
 
+    <!--  ------------------------------------------  -->
+    <!--  ----------  Juego Drag and Drop ----------  -->
+    <!--  ------------------------------------------  -->
+    <h3 class="subtitle__ejercicio"> Juego Drag and Drog </h3>
+    <h3> Arrastra cada bandera a su lugar </h3>
+    <br>
+
+    <div id="juegoContainer">
 
 
-    <div class="btn__container">
-        <button id="si"> Si </button>
-        <button id="no"> No </button>
-        <button id="mostrar"> Mostrar </button>
+        <img src="../assets/img/bandera-belgica.png" id="alemania" class="img__bandera">
+        <img src="../assets/img/bandera-españa.png" id="espanna" class="img__bandera">
+        <img src="../assets/img/bandera-francia.png" id="francia" class="img__bandera">
+        <img src="../assets/img/bandera-italia.png" id="italia" class="img__bandera">
+
+
+        <div id="recuadros">
+            <div id="recAle" class="rec-soltar" data-name="Alemania"> Alemania </div>
+            <div id="recEsp" class="rec-soltar" data-name="España"> España </div>
+            <div id="recFra" class="rec-soltar" data-name="Francia"> Francia </div>
+            <div id="recIta" class="rec-soltar" data-name="Italia"> Italia </div>
+        </div>
+
     </div>
 
     <span class="separador"> </span>
+
+
+    <!--  ---------------------------------  -->
+    <!--  ----------  Selectable ----------  -->
+    <!--  ---------------------------------  -->
+    <h3 class="subtitle__ejercicio"> Selectable y Sortable </h3>
+
+    <div class="listas__container">
+
+        <ul id="listaMeses">
+            <li> Enero </li>
+            <li> Febrero </li>
+            <li> Marzo </li>
+            <li> Abril </li>
+            <li> Mayo </li>
+            <li> Junio </li>
+            <li> Julio </li>
+            <li> Agosto </li>
+            <li> Septiembre </li>
+            <li> Octubre </li>
+            <li> Noviembre </li>
+            <li> Diciembre </li>
+        </ul>
+
+        <ul id="listaDias">
+            <li> Lunes </li>
+            <li> Martes </li>
+            <li> Miercoles </li>
+            <li> Jueves </li>
+            <li> Viernes </li>
+            <li> Sábado </li>
+            <li> Domingo </li>
+        </ul>
+
+    </div>
+
+
+    <span class="separador"> </span>
+
+
+
+    <!--  --------------------------------  -->
+    <!--  ----------  Resizable ----------  -->
+    <!--  --------------------------------  -->
+    <h3 class="subtitle__ejercicio"> Resizable </h3>
+
+    <div class="parrafo__container">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat porro distinctio velit eum nulla.
+            Possimus excepturi amet enim incidunt tempora beatae,
+            quisquam inventore facere nihil atque perferendis vero architecto ipsam?
+        </p>
+    </div>
+
+    <span class="separador"> </span>
+
+
+
+    <!--  -------------------------------  -->
+    <!--  ----------  Acordeon ----------  -->
+    <!--  -------------------------------  -->
+    <h3 class="subtitle__ejercicio"> Acordeon </h3>
+
+    <div id="acordeonContainer">
+
+        <h3> Título 1 </h3>
+        <div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat porro distinctio velit eum nulla.
+                Possimus excepturi amet enim incidunt tempora beatae,
+                quisquam inventore facere nihil atque perferendis vero architecto ipsam?
+            </p>
+        </div>
+
+        <h3> Título 2 </h3>
+        <div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat porro distinctio velit eum nulla.
+                Possimus excepturi amet enim incidunt tempora beatae,
+                quisquam inventore facere nihil atque perferendis vero architecto ipsam?
+            </p>
+        </div>
+
+        <h3> Título 3 </h3>
+        <div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat porro distinctio velit eum nulla.
+                Possimus excepturi amet enim incidunt tempora beatae,
+                quisquam inventore facere nihil atque perferendis vero architecto ipsam?
+            </p>
+        </div>
+
+    </div>
+
+    <span class="separador"> </span>
+
+
+
+    <!--  ------------------------------------  -->
+    <!--  ----------  Autocompletar ----------  -->
+    <!--  ------------------------------------  -->
+    <h3 class="subtitle__ejercicio"> Autocompletar </h3>
+
+    <input type="text" id="caja">
+
+    <span class="separador"> </span>
+
+
+    <!--  ------------------------------  -->
+    <!--  ----------  Botones ----------  -->
+    <!--  ------------------------------  -->
+
+    <h3 class="subtitle__ejercicio"> Botones </h3>
+
+    <!--  -----  Boton solo  -----  -->
+    <div class="botonesUI__container">
+        <h4> Boton Normal </h4>
+        <button id="boton"> Enviar </button>
+    </div>
+
+    <!--  -----  Botones CheckBox  -----  -->
+    <div class="botonesUI__container">
+        <h4> Boton Check Box </h4>
+        <input type="checkbox" id="on" value="on">
+        <label for="on"> On / Off </label>
+    </div>
+
+
+    <!--  -----  Botones CheckBox en Grupo  -----  -->
+    <div class="botonesUI__container">
+        <h4> Boton Check Box en Grupo </h4>
+        <div id="deportes">
+            <input type="checkbox" id="opcion1" value="futbol">
+            <label for="opcion1"> Futbol </label>
+
+            <input type="checkbox" id="opcion2" value="Baloncesto">
+            <label for="opcion2"> Baloncesto </label>
+
+            <input type="checkbox" id="opcion3" value="voleibol">
+            <label for="opcion3"> Voleibol </label>
+
+            <input type="checkbox" id="opcion4" value="tenis">
+            <label for="opcion4"> Tenis </label>
+        </div>
+    </div>
+
+
+    <!--  -----  Botones Radio Buttons  -----  -->
+    <div class="botonesUI__container">
+        <h4> Boton de Radio </h4>
+        <div id="radio">
+            <input type="radio" name="radio" id="opcion5" value="soltero">
+            <label for="opcion5"> Soltero </label>
+
+            <input type="radio" name="radio" id="opcion6" value="casado">
+            <label for="opcion6"> Casado </label>
+
+            <input type="radio" name="radio" id="opcion7" value="diborciado">
+            <label for="opcion7"> Divorciado </label>
+
+            <input type="radio" name="radio" id="opcion8" value="viudo">
+            <label for="opcion8"> Viudo </label>
+        </div>
+    </div>
+
+    <span class="separador"> </span>
+
+
+    <!--  ---------------------------------  -->
+    <!--  ----------  Calendario ----------  -->
+    <!--  ---------------------------------  -->
+
+    <h3 class="subtitle__ejercicio"> Calendario </h3>
+
+    <div class="calendars__container">
+        <h4> Mostrar, Seleccionar Todos los Meses </h4>
+        <input type="text" id="calendar1">
+    </div>
+
+    <div class="calendars__container">
+        <h4> Cambiar mes, año, mínimo y máximo de dias </h4>
+        <input type="text" id="calendar2">
+    </div>
+
+    <div class="calendars__container">
+        <h4> Mostrar Semanas, Nº de calendarios por meses </h4>
+        <input type="text" id="calendar3">
+    </div>
+
+    <div class="calendars__container">
+        <h4> Mostrar Botón - Pulsar en el Gato </h4>
+        <input type="text" id="calendar4">
+    </div>
+
+    <span class="separador"> </span>
+
+
+    <!--  -------------------------------  -->
+    <!--  ----------  Dialogos ----------  -->
+    <!--  -------------------------------  -->
+
+    <h3 class="subtitle__ejercicio"> Ventanas de Dialogos </h3>
+
+    <div id="ventana" title="Advertencia">
+        <br>
+        <p> Esta página contiene material solo para adultos. </p>
+        <br>
+        <p> Continua si eres mayor de 18 años. </p>
+    </div>
+
+    <span class="separador"> </span>
+
+
+
+    <!--  ----------------------------  -->
+    <!--  ----------  Menús ----------  -->
+    <!--  ----------------------------  -->
+
+    <h3 class="subtitle__ejercicio"> Menús </h3>
+
+    <ul id="listaMenu">
+        <li> <a href="#"> <span class="ui-icon ui-icon-image"> </span> ¿Quienes somos? </a> </li>
+        <li> <a href="#"> <span class="ui-icon ui-icon-star"></span> Historia </a> </li>
+        <li> <a href="#"> ¿Donde estamos? </a> </li>
+        <li>
+            <a href="#"> Productos </a>
+            <ul id="subgrupo">
+                <li> <a> Péines </a> </li>
+                <li> <a> Cepillos </a> </li>
+                <li> <a> Jabones </a> </li>
+            </ul>
+
+        </li>
+        <li> <a href="#"> Servicios </a>
+        <li>
+    </ul>
+
+    <span class="separador"> </span>
+
+
+
+    <!--  -------------------------------------------------------  -->
+    <!--  ----------  Barras de Progreso, Deslizadores ----------  -->
+    <!--  -------------------------------------------------------  -->
+
+    <h3 class="subtitle__ejercicio"> Barras de Progreso, Deslizadores </h3>
+
+    <input type="number" id="valueProgressBar" min="1" max="100" value="50"> <br>
+    <div id="progressBar"> </div> <br>
+
+    <label for="comensales"> Nº de comensales </label>
+    <input type="text" id="comensales"> <br>
+    <div id="slider"> </div>
+
+
+    <span class="separador"> </span>
+
+
+    <!--  ------------------------------  -->
+    <!--  ----------  Spinner ----------  -->
+    <!--  ------------------------------  -->
+
+    <h3 class="subtitle__ejercicio"> Spinner </h3>
+
+    <input type="text" id="spinner"> <br>
+
+    <span class="separador"> </span>
+
+
+
+
+
+
+
+
 
 
 
@@ -66,5 +353,5 @@
 </section>
 
 
-<script src="./assets/jquery/core/jquery-3.7.1.min.js"> </script>
-<script src="./assets/jquery/ui/jquery-ui.min.js"> </script>
+<script src="./assets/jquery/core/jquery-1.11.1.min.js" defer> </script>
+<script src="../assets/jquery/ui/jquery-ui-1.12.0.min.js" defer> </script>

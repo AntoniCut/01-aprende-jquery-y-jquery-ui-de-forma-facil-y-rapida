@@ -6,8 +6,7 @@
 $(document).ready(function () {
 
 
-    console.warn('-----  02-selectores.js - cargado!!!  -----');
-
+    console.warn('-----  02-selectores.js - cargado!!!  -- jQuery Versión ', $.fn.jquery);
 
     //  -----  Cambiar el título de la página  -----
     document.title = '02 - Selectores';

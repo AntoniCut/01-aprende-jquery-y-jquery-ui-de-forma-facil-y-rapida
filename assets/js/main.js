@@ -3,17 +3,20 @@
 //  ******************************************
 
 
+let $containerTemporal = $('#renderHtml');
+console.log($containerTemporal);
+
 
 $(document).ready(function () {
 
 
-    console.warn('---------- Documento Cargado!!! ----- jQuery version:', $.fn.jquery, ' ----------', '\n');
+    console.warn('---------- main.js - Cargado!!! ----- jQuery version:', $.fn.jquery, ' ----------', '\n');
 
     //  -----  ocultar Menú Secciones  -----
     $('.aside .navbar__list').hide();
 
     //  -----  Renderizar Menú de Temas de jQuery UI  -----
-    $('#renderJqueryUI').load('./assets/html/change-theme-jquery-ui-v2.html', function() {
+    $('#renderJqueryUI').load('./assets/html/change-theme-jquery-ui-v2.html', function () {
 
         //  -----  ocultar Menú  -----
         $('#btn-container').hide();
@@ -23,10 +26,10 @@ $(document).ready(function () {
             $(".btn-container").slideToggle();
         });
     });
-   
-    
+
+
     //  -----  Mostrar / Ocultar  --  Menú Secciones del Curso  -----
-    $(".aside").on('click', '.navbar__title' , function () {
+    $(".aside").on('click', '.navbar__title', function () {
 
         //  -----  Cambiar el pathname de la URL del navegador  -----
         history.pushState({}, '/', '/');
@@ -37,46 +40,91 @@ $(document).ready(function () {
     });
 
 
-    function loadSimultaneousFade(container, url, scriptUrl, pathname) {
-       
+
+    // function loadSimultaneousFade( $newContainer, url, scriptUrl, pathname) {
 
 
-        $(container).load(url, function (response, status, xhr) {
+    //     // Empezamos con un fadeOut del contenedor actual
+    //     $($newContainer).fadeOut( function() {
 
-            if (status === "success") {
 
-                //  -----  Cambiar el pathname de la URL del navegador  -----
-                //if (pathname) history.pushState({}, '', pathname);
 
-                //console.log(location.pathname, ' - ', pathname);
+    //         // Mientras el fadeOut ocurre, cargamos el nuevo contenido
+    //         $($newContainer).load(url, function(response, status, xhr) {
 
-                //  -----  Cargar el script asociado  -----
-                if (scriptUrl) $.getScript(scriptUrl);
+    //             if (status === "success") {
+    //                 // Si se pasa un scriptUrl, cargamos el script correspondiente
+    //                 if (scriptUrl) {
+    //                     $.getScript(scriptUrl);
+    //                 }
 
-            } else console.error("Error al cargar el contenido:", status);
+    //                 // Cambiamos el pathname en la URL del navegador si se pasa
+    //                 //if (pathname) history.pushState({}, '', pathname);
 
+
+    //                 // Una vez que se ha cargado el contenido, lo mostramos con fadeIn
+    //                 $($newContainer).fadeIn(); // Ajusta el tiempo a lo que desees
+    //             } else {
+    //                 console.error("Error al cargar el contenido:", status);
+    //             }
+    //         });
+
+    //         $containerTemporal = $newContainer;
+    //         console.log($containerTemporal)
+
+    //     });
+    // }
+
+
+    function loadSimultaneousFade($newContainer, url, scriptUrls, pathname) {
+
+        // Empezamos con un fadeOut del contenedor actual
+        $($newContainer).fadeOut(function () {
+
+            // Mientras el fadeOut ocurre, cargamos el nuevo contenido
+            $($newContainer).load(url, function (response, status, xhr) {
+
+                if (status === "success") {
+
+                    // Si se pasan scripts, los cargamos usando $.when
+                    if (scriptUrls && scriptUrls.length > 0) {
+
+                        const scriptPromises = scriptUrls.map((scriptUrl) => $.getScript(scriptUrl));
+
+                        $.when(...scriptPromises).done(function () {
+                            console.log("Todos los scripts se han cargado correctamente.");
+                        }).fail(function () {
+                            console.error("Error al cargar uno o más scripts.");
+                        });
+                    }
+
+                    // Cambiamos el pathname en la URL del navegador si se pasa
+                    //if (pathname) {
+                    //  history.pushState({}, '', pathname);
+                    //}
+
+                    // Una vez que se ha cargado el contenido, lo mostramos con fadeIn
+                    $($newContainer).fadeIn();
+
+                } else {
+                    console.error("Error al cargar el contenido:", status);
+                }
+
+            });
         });
     }
 
 
 
     // ---------- 01-primeros-pasos ----------
-    $('#home').on('click', function () {
-        loadSimultaneousFade(
-            "#renderHtml",
-            './assets/html/home.html',
-            './01-primeros-pasos-introduccion/01-introduccion.js',
-            '/01-introduccion'
-        );
-    });
-
-    
-    // ---------- 01-primeros-pasos ----------
     $('#primerosPasos').on('click', function () {
         loadSimultaneousFade(
             "#renderHtml",
             './01-primeros-pasos-introduccion/01-introduccion.html',
-            './01-primeros-pasos-introduccion/01-introduccion.js',
+            [
+                './assets/jquery/core/jquery-3.7.1.min.js',
+                './01-primeros-pasos-introduccion/01-introduccion.js'
+            ],
             '/01-introduccion'
         );
     });
@@ -87,7 +135,10 @@ $(document).ready(function () {
         loadSimultaneousFade(
             "#renderHtml",
             './02-selectores/02-selectores.html',
-            './02-selectores/02-selectores.js',
+            [
+                './assets/jquery/core/jquery-3.7.1.min.js',
+                './02-selectores/02-selectores.js'
+            ],
             '/02-selectores'
         );
     });
@@ -98,7 +149,11 @@ $(document).ready(function () {
         loadSimultaneousFade(
             "#renderHtml",
             './03-eventos/03-eventos.html',
-            './03-eventos/03-eventos.js',
+            [
+                './assets/jquery/core/jquery-3.7.1.min.js',
+                './03-eventos/03-eventos.js'
+            ],
+            
             '/03-eventos'
         );
     });
@@ -109,7 +164,10 @@ $(document).ready(function () {
         loadSimultaneousFade(
             "#renderHtml",
             './04-funciones-y-efectos/04-funciones-efectos.html',
-            './04-funciones-y-efectos/04-funciones-efectos.js',
+            [
+                './assets/jquery/core/jquery-3.7.1.min.js',
+                './04-funciones-y-efectos/04-funciones-efectos.js',
+            ],
             '/04-funciones-y-efectos'
         );
     });
@@ -120,7 +178,10 @@ $(document).ready(function () {
         loadSimultaneousFade(
             "#renderHtml",
             './05-jquery-y-html/05-jquery-html.html',
-            './05-jquery-y-html/05-jquery-html.js',
+            [
+                './assets/jquery/core/jquery-3.7.1.min.js',
+                './05-jquery-y-html/05-jquery-html.js',
+            ],
             '/05-jquery-y-html'
         );
     });
@@ -131,7 +192,10 @@ $(document).ready(function () {
         loadSimultaneousFade(
             "#renderHtml",
             './06-jquery-y-ajax/06-jquery-ajax.html',
-            './06-jquery-y-ajax/06-jquery-ajax.js',
+            [
+                './assets/jquery/core/jquery-3.7.1.min.js',
+                './06-jquery-y-ajax/06-jquery-ajax.js'
+            ],
             '/06-jquery-y-ajax'
         );
     });
@@ -142,7 +206,12 @@ $(document).ready(function () {
         loadSimultaneousFade(
             "#renderHtml",
             './07-widgets/07-widgets.html',
-            './07-widgets/07-widgets.js',
+            [
+                //'./assets/jquery/core/jquery-1.11.1.min.js',
+                //'./assets/jquery/core/jquery-3.7.1.min.js',
+                //'./assets/jquery/ui/jquery-ui-1.11.2.min.js',
+                './07-widgets/07-widgets.js'
+            ],
             '/07-widgets'
         );
     });
@@ -150,14 +219,18 @@ $(document).ready(function () {
 
     // ---------- 08-jQueryUI ----------
     $('#jqueryUI').on('click', function () {
-        
+
         loadSimultaneousFade(
             "#renderHtml",
             './08-jquery-ui/08-jquery-ui.html',
-            './08-jquery-ui/08-jquery-ui.js',
+            [
+                //'./assets/jquery/core/jquery-1.11.1.min.js',
+                //'./assets/jquery/ui/jquery-ui-1.11.2.min.js',
+                './08-jquery-ui/08-jquery-ui.js',
+            ],
             '/08-jquery-ui'
         );
-       
+
     });
 
 
@@ -166,7 +239,10 @@ $(document).ready(function () {
         loadSimultaneousFade(
             "#renderHtml",
             './09-cierre-curso/09-cierre-curso.html',
-            './09-cierre-curso/09-cierre-curso.js',
+            [
+                './assets/jquery/core/jquery-3.7.1.min.js',
+                './09-cierre-curso/09-cierre-curso.js',
+            ],
             '/09-cierre-curso'
         );
     });

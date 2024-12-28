@@ -5,7 +5,8 @@
 
 $(document).ready(function () {
 
-    console.warn('-----  05-jquery-html.js - cargado!!!  -----');
+    
+    console.warn('-----  05-jquery-html.js - cargado!!!  -- jQuery Versión ', $.fn.jquery);
 
 
     //  -----  Cambiar el título de la página  -----

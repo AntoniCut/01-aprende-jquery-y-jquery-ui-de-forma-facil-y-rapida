@@ -5,7 +5,8 @@
 
 $(document).ready(function () {
 
-    console.warn('-----  07-widgets.js - cargado!!!  ----- jQuery version:', $.fn.jquery, ' ----------', '\n');
+    
+    console.warn('-----  07-widgets.js - cargado!!!  -- jQuery Versión ', $.fn.jquery);
     
 
     //  -----  Cambiar el título de la página  -----
@@ -64,7 +65,6 @@ $(document).ready(function () {
     //  -------------------------------------
     //  ----------  jQuery Rotate  ----------
     //  -------------------------------------
-
 
     //  -----  Rotacioón al pulsar el botón  -----
     $("#btnRotate").on('click', function () {
@@ -223,7 +223,6 @@ $(document).ready(function () {
     //  uncover wipe    zoom    
 
     //  ---------------------------------------------------------------------------------------------
-
 
     $("#btn-cycle-effect").on('click', function () {
 

@@ -6,9 +6,8 @@
 $(document).ready(function () {
 
 
-    console.warn('-----  01-introduccion.js - cargado!!!  -----');
+    console.warn('-----  01-introduccion.js - cargado!!!  -- jQuery Versión ', $.fn.jquery);
     
-
     //  -----  Cambiar el título de la página  -----
     document.title = '01 - Introducción';
 

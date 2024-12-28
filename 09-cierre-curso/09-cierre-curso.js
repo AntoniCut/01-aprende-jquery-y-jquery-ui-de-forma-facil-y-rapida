@@ -5,8 +5,7 @@
 
 $(document).ready(function () {
 
-    console.warn('-----  09-cierre-curso.js - cargado!!!  -----');
-
+    console.warn('-----  08-jquery-ui.js - cargado!!!  -- jQuery Versión ', $.fn.jquery);
 
     //  -----  Cambiar el título de la página  -----
     document.title = '09 - Cierre del Curso';
