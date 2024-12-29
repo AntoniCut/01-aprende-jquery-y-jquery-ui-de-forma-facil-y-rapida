@@ -640,6 +640,45 @@ input[type="text"] {
 }
 
 
+/*  -----  Tabs  -----  */
+
+.tabs__container {
+    width: 80%;
+}
+
+
+/*  -----  Efectos  -----  */
+
+.efectos-ui__container {
+    width: 80%;
+    height: 800px;
+    padding-top: 50px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    background-color: #eee;
+}
+
+select {
+    width: 150px;
+    height: 30px;
+}
+
+#apply-effect-easing {
+    height: 30px;
+    text-align: center;
+}
+
+#efectoUI {
+    width: 300px;
+    height: 300px;
+    background-color: blue;
+    position: absolute;
+    top: 300px;
+    left: 300px;
+}
 
 
 

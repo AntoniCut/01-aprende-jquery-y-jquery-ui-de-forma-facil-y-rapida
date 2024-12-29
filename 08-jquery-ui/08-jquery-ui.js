@@ -7,7 +7,7 @@ $(document).ready(function () {
 
 
     console.warn('-----  08-jquery-ui.js - cargado!!!  -----');
-    console.warn('----- Versiones  --  jQuery ', $.fn.jquery, '  --  jQuery UI ', $.ui);
+    console.warn('----- Versiones  --  jQuery ', $.fn.jquery, '\n  --  jQuery UI ', $.ui);
 
 
     //  -----  Cambiar el título de la página  -----
@@ -18,14 +18,17 @@ $(document).ready(function () {
     //  ----------  jQuery UI  ----------
     //  ---------------------------------
 
-    //  -----------------------------------------------------
-    //  -----  Introducción  --  Calendar como ejemplo  -----
-    //  -----------------------------------------------------
-    
+
+    //  ---------------------------------------------------------------
+    //  ----------  Introducción  --  Calendar como ejemplo  ----------
+    //  ---------------------------------------------------------------
+
     $("#calendario").datepicker();
 
 
-    //  -----  Draggable y Droppable  -----
+    //  ---------------------------------------------
+    //  ----------  Draggable y Droppable  ----------
+    //  ---------------------------------------------
 
     $("#contenedorDraggable")
         .css({
@@ -57,7 +60,7 @@ $(document).ready(function () {
     //  -------------------------------------------
     //  ----------  Juego Drag and Drop  ----------
     //  -------------------------------------------
-    
+
     $(".img__bandera").draggable({
         containment: 'parent',
         drop: soltar,
@@ -107,14 +110,20 @@ $(document).ready(function () {
             .css('background-color', '#666666')
     }
 
-    //  -----  Selectable  -----
+
+    //  ---------------------------------------------
+    //  ----------  Selectable y Sorteable ----------
+    //  ---------------------------------------------
+
     $("#listaMeses").selectable();
 
-    //  -----  Sorteable  -----
     $("#listaDias").sortable();
 
 
-    //  -----  Resizable  -----
+    //  ---------------------------------
+    //  ----------  Resizable  ----------
+    //  ---------------------------------
+
     $(".parrafo__container")
         .css({
             width: 300,
@@ -125,13 +134,18 @@ $(document).ready(function () {
         .resizable();
 
 
-    //  -----  Acordeon  -----
+    //  --------------------------------
+    //  ----------  Acordeon  ----------
+    //  --------------------------------
+
     $("#acordeonContainer").accordion({
         heightStyle: "content" // Ajusta la altura según el contenido
     });
 
 
-    //  -----  Autocompletar  -----
+    //  -------------------------------------
+    //  ----------  Autocompletar  ----------
+    //  -------------------------------------
 
     const meses = [
         'Enero',
@@ -153,7 +167,9 @@ $(document).ready(function () {
     });
 
 
-    //  -----  Botones  -----
+    //  -------------------------------
+    //  ----------  Botones  ----------
+    //  -------------------------------
 
     $("#boton").button({
         icons: {
@@ -169,7 +185,9 @@ $(document).ready(function () {
     $("#radio").buttonset();
 
 
-    //  -----  Calendario  -----
+    //  ----------------------------------
+    //  ----------  Calendario  ----------
+    //  ----------------------------------
 
     $("#calendar1").datepicker({
         showOtherMonths: true,
@@ -196,7 +214,10 @@ $(document).ready(function () {
     });
 
 
-    //  -----  Ventanas de Diálogo  -----
+    //  -------------------------------------------
+    //  ----------  Ventanas de Diálogo  ----------
+    //  -------------------------------------------
+
     $("#ventana").dialog({
         modal: true,
         width: 300,
@@ -209,8 +230,12 @@ $(document).ready(function () {
     });
 
 
-    //  -----  Menús  -----
+    //  -----------------------------
+    //  ----------  Menús  ----------
+    //  -----------------------------
+
     //  -----  Utilizar la version 1.12.0 de jQueryUI para los iconos de los menus -----
+
     $("#listaMenu").menu();
 
 
@@ -235,7 +260,9 @@ $(document).ready(function () {
     });
 
 
-    //  -----  Slider  -----
+    //  ------------------------------
+    //  ----------  Slider  ----------
+    //  ------------------------------
     $("#slider").slider({
 
         range: 'max',
@@ -254,10 +281,71 @@ $(document).ready(function () {
     //  -------------------------------
     //  ----------  Spinner  ----------
     //  -------------------------------
+
     $("#spinner").spinner({
         min: 1,
         max: 20,
         step: 2
+    });
+
+
+    //  ----------------------------
+    //  ----------  Tabs  ----------
+    //  ----------------------------
+
+    $("#tabs").tabs();
+
+
+
+    //  --------------------------------
+    //  ----------  Tooltips  ----------
+    //  --------------------------------
+
+    $(document).tooltip();
+
+
+    //  -------------------------------
+    //  ----------  Efectos  ----------
+    //  -------------------------------
+
+    //  ----------  Effect  -----------------------------------------------------------------
+    //  -----       Highlight    Bounce     Shake   Scale   Explode     fade    drop    -----
+    //  -----       Puff         Pulsate    Slide   Blind   Clip        Fold    -------------
+    //  -------------------------------------------------------------------------------------
+
+    //  ----------  Easing  -------------------------------------------------------------------------------------------------
+    //  -----  linear           swing            easeInQuad          easeOutQuad     easeInOutQuad                      -----
+    //  -----  easeInCubic      easeOutCubic     easeInOutCubic      easeInQuart     easeOutQuart      easeInOutQuart   -----  
+    //  -----  easeInSine       easeOutSine      easeInOutSine       easeInExpo      easeOutExpo       easeInOutExpo    -----
+    //  -----  easeInQuint      easeOutQuint     easeInOutQuint      easeInCirc      easeOutCirc       easeInOutCirc    -----
+    //  -----  easeInElastic    easeOutElastic   easeInOutElastic    easeInBack      easeOutBack       easeInOutBack    -----
+    //  -----  easeInBounce     easeInOutBounce  easeOutBounce                                                          -----                                                                                  -----
+    //-----------------------------------------------------------------------------------------------------------------------
+
+    $('#apply-effect-easing').on('click', function () {
+
+        const effect = $('#effect-select').val();
+        const easing = $('#easing-select').val();
+        const $box = $('#efectoUI');
+
+        console.log(effect, ' - ', easing);
+
+        //  -----  Aplicar efecto  -----
+        $box.effect(effect, easing, 3000);
+
+    });
+
+
+    //  -----  Aplicar efecto  -----
+    $("#ventanaEfectos").dialog({
+        show: {
+            effect: "bounce",
+            duration: 3000
+        },
+        hide: {
+            effect: "explode",
+            duration: 2000
+        }
     });
 
 });
